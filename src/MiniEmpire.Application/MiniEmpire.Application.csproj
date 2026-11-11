@@ -2,7 +2,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MiniEmpire.Domain\MiniEmpire.Domain.csproj" />
-    <ProjectReference Include="..\..\tests\MiniEmpire.Application.Tests\MiniEmpire.Application.Tests.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
