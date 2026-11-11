@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MiniEmpire.API/MiniEmpire.API.csproj" />
+    <Project Path="src/MiniEmpire.Application/MiniEmpire.Application.csproj" />
+    <Project Path="src/MiniEmpire.Domain/MiniEmpire.Domain.csproj" />
+    <Project Path="src/MiniEmpire.Infrastructure/MiniEmpire.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MiniEmpire.Application.Tests/MiniEmpire.Application.Tests.csproj" />
+    <Project Path="tests/MiniEmpire.Domain.Tests/MiniEmpire.Domain.Tests.csproj" />
+  </Folder>
+</Solution>
