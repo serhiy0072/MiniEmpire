@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace MiniEmpire.Application.Common.Messaging;
 
-namespace MiniEmpire.Application.Common.Messaging
+/// <summary>Обробник одного типу запиту.</summary>
+public interface IRequestHandler<TRequest, TResponse>
+    where TRequest : IRequest<TResponse>
 {
-    internal interface IRequestHandler
-    {
-    }
+    Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken);
 }

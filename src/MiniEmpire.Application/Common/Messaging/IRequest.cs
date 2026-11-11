@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace MiniEmpire.Application.Common.Messaging;
 
-namespace MiniEmpire.Application.Common.Messaging
+/// <summary>Маркер запиту, який повертає <typeparamref name="TResponse"/>.</summary>
+public interface IRequest<TResponse>
 {
-    internal interface IRequest
-    {
-    }
 }

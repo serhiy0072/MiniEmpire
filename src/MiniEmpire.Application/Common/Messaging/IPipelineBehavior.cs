@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace MiniEmpire.Application.Common.Messaging;
 
-namespace MiniEmpire.Application.Common.Messaging
+/// <summary>Обгортка навколо обробника: робить щось до і після, або зупиняє ланцюжок.</summary>
+public interface IPipelineBehavior<TRequest, TResponse>
 {
-    internal interface IPipelineBehavior
-    {
-    }
+    Task<TResponse> Handle(TRequest request, Func<Task<TResponse>> next, CancellationToken cancellationToken);
 }

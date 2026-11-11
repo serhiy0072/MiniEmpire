@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿namespace MiniEmpire.Application.Common.Validation;
 
-namespace MiniEmpire.Application.Common.Validation
+/// <summary>Повертає тексти помилок; порожньо — запит валідний.</summary>
+public interface IValidator<T>
 {
-    internal interface IValidator
-    {
-    }
+    IEnumerable<string> Validate(T request);
 }
