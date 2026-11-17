@@ -2,7 +2,7 @@
 
 namespace MiniEmpire.Application.Common.Messaging;
 
-public sealed class Mediator : ISender 
+public sealed class Mediator : ISender
 {
     private readonly IServiceProvider _serviceProvider;
 
@@ -18,12 +18,13 @@ public sealed class Mediator : ISender
 
         Func<Task<TResponse>> next = () => handler.Handle(request, cancellationToken);
 
-        foreach(var behavior in Enumerable.Reverse(behaviors))
+        foreach (var behavior in behaviors.Reverse())
         {
             var inner = next;
+            next = () => behavior.Handle(request, inner, cancellationToken);
         }
 
 
-        return handler.Handle(request, cancellationToken);
+        return next();
     }
 }
